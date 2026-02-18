@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Host
+Host: https://farmersbranchlandscaping.com
+
+# Sitemaps
+Sitemap: https://farmersbranchlandscaping.com/sitemap.xml

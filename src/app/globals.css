@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-source-sans);
+
+  /* Professional Color Palette */
+  --color-forest-50: #f0fdf4;
+  --color-forest-100: #dcfce7;
+  --color-forest-200: #bbf7d0;
+  --color-forest-300: #86efac;
+  --color-forest-400: #4ade80;
+  --color-forest-500: #22c55e;
+  --color-forest-600: #16a34a;
+  --color-forest-700: #15803d;
+  --color-forest-800: #166534;
+  --color-forest-900: #14532d;
+  --color-forest-950: #052e16;
+
+  --color-earth-50: #faf5f0;
+  --color-earth-100: #f0e6d8;
+  --color-earth-200: #e0ccb0;
+  --color-earth-300: #cfad82;
+  --color-earth-400: #c19158;
+  --color-earth-500: #b67d3f;
+  --color-earth-600: #a46834;
+  --color-earth-700: #88512d;
+  --color-earth-800: #6f422a;
+  --color-earth-900: #5b3826;
+  --color-earth-950: #311c12;
+
+  --color-stone-50: #f8f8f7;
+  --color-stone-100: #f0efed;
+  --color-stone-200: #dddbd6;
+  --color-stone-300: #c5c2b9;
+  --color-stone-400: #aaa598;
+  --color-stone-500: #968f80;
+  --color-stone-600: #897f72;
+  --color-stone-700: #72695f;
+  --color-stone-800: #5f5750;
+  --color-stone-900: #4e4843;
+  --color-stone-950: #292623;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff; /* Keep white for drainage sites generally */
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply bg-forest-600 hover:bg-forest-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-forest-200 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-forest-600 text-forest-600 hover:bg-forest-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-xl hover:shadow-stone-200/50 transition-all duration-500;
+  }
+
+  .heading-1 {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-stone-950 leading-tight;
+  }
+
+  .heading-2 {
+    @apply font-display text-3xl md:text-4xl font-bold text-stone-950 leading-tight;
+  }
+
+  .text-p {
+    @apply text-lg text-stone-600 leading-relaxed;
+  }
+}
