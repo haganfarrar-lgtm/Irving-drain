@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display, Source_Sans_3 } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -84,7 +83,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <Script src="https://link.gohighlevel.com/js/form_embed.js" strategy="afterInteractive" />
       </body>
     </html>
   );
